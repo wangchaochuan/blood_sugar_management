@@ -1,0 +1,28 @@
+/* pages/add/index.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 100rpx);
+}
+
+.van-cell-group {
+  height: calc(100vh - 220rpx);
+  width: 100%;
+}
+
+.van-hairline--top-bottom:after {
+  border-bottom: none !important;
+}
+
+.operation {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 120rpx;
+}
+
+.van-button {
+  width: 240rpx;
+  margin-top: 16rpx;
+}

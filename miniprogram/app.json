@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/list/index",
+    "pages/add/index",
+    "pages/chart/index",
+    "pages/detail/index",
+    "pages/cookbook/index",
+    "pages/knowledge/index"
+  ],
+  "lazyCodeLoading": "requiredComponents",
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "每日血糖监测",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [{
+        "pagePath": "pages/knowledge/index",
+        "text": "控糖小贴士"
+      },
+      {
+        "pagePath": "pages/list/index",
+        "text": "列表"
+      },
+      {
+        "pagePath": "pages/add/index",
+        "text": "记录"
+      },
+      {
+        "pagePath": "pages/chart/index",
+        "text": "图表"
+      },
+      {
+        "pagePath": "pages/cookbook/index",
+        "text": "推荐食谱"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

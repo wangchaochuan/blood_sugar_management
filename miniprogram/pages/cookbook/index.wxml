@@ -1,0 +1,25 @@
+<!--pages/cookbook/index.wxml-->
+<view class="cookbook">
+  <view class="title">
+    <view class="date">
+      <view>今天是</view>
+      <view class="text">{{date}}</view>
+    </view>
+    <view class="day">{{week}}</view>
+  </view>
+  <view class="content">
+    <view class="text">今天为您推荐的食谱为：</view>
+    <view class="breakfast">
+      <view class="label">早餐：</view>
+      <view>{{breakfast}}</view>
+    </view>
+    <view class="lunch">
+      <view class="label">午餐：</view>
+      <view>{{lunch}}</view>
+    </view>
+    <view class="dinner">
+      <view class="label">晚餐：</view>
+      <view>{{dinner}}</view>
+    </view>
+  </view>
+</view>

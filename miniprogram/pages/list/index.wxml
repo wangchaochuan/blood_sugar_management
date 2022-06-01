@@ -1,0 +1,29 @@
+<!--pages/list/index.wxml-->
+<view class="container">
+  <view wx:if="{{showLoading}}" class="loading">
+    <van-loading type="spinner" color="#4c5cdb" />
+  </view>
+  <view class="content">
+    <view class="tip">只展示最近30天内的数据</view>
+    <view wx:if="{{list.length===0}}">
+      <van-empty description="暂无数据" />
+    </view>
+    <scroll-view wx:else class="scroll-container">
+      <van-cell-group inset>
+        <van-cell wx:for="{{list}}" wx:for-item="record" wx:key="_id" use-label-slot title="{{record.date}}" data-id="{{record._id}}" bind:click="handleClick">
+          <view slot="label">
+            <view class="row">
+              <view class="label">早上血糖</view>
+              <view class="value">{{record.morning}}</view>
+            </view>
+            <view class="row">
+              <view class="label">晚上血糖</view>
+              <view class="value">{{record.evening}}</view>
+            </view>
+          </view>
+        </van-cell>
+      </van-cell-group>
+    </scroll-view>
+  </view>
+  <van-toast id="van-toast" custom-class="van-toast-box" />
+</view>

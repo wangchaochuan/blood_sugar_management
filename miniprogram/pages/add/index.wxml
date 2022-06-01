@@ -1,0 +1,22 @@
+<view class="container">
+  <view wx:if="{{showLoading}}" class="loading">
+    <van-loading type="spinner" color="#4c5cdb" />
+  </view>
+  <van-cell-group>
+    <van-field value="{{ record.morning }}" required input-align="right" type="digit" size="large" label="早上血糖" placeholder="早上血糖是多少呢" bind:change="handleChangeMorning" />
+    <van-field value="{{ record.evening }}" required input-align="right" type="digit" size="large" label="晚上血糖" placeholder="晚上血糖是多少呢" bind:change="handleChangeEvening" />
+    <van-field value="{{ record.breakfast }}" size="large" input-align="right" label="早餐" type="text" placeholder="早餐吃了什么呀" bind:change="handleChangeBreakfast" />
+    <van-field value="{{ record.brunch }}" size="large" input-align="right" label="早午餐" type="text" placeholder="早午餐吃了什么呀" bind:change="handleChangeBrunch" />
+    <van-field value="{{ record.lunch }}" size="large" input-align="right" label="午餐" type="text" placeholder="午餐吃了什么呀" bind:change="handleChangeLunch" />
+    <van-field value="{{ record.dunch }}" size="large" input-align="right" label="午晚餐" type="text" placeholder="午晚餐吃了什么呀" bind:change="handleChangeDunch" />
+    <van-field value="{{ record.dinner }}" size="large" input-align="right" label="晚餐" type="text" placeholder="晚餐吃了什么呀" bind:change="handleChangeDinner" />
+    <van-field value="{{ record.exercise }}" size="large" input-align="right" label="运动量(千卡)" type="digit" placeholder="今天运动量达标了没" bind:change="handleChangeExercise" />
+    <van-cell title="日期" value="{{ date }}" bind:click="onDisplay" />
+    <van-calendar show="{{ show }}" type="single" min-date="{{startDate}}" max-date="{{endDate}}" default-date="{{endDate}}" show-confirm="{{false}}" bind:close="onClose" bind:select="onSelect" />
+  </van-cell-group>
+  <view class="operation">
+    <van-button round size="small" type="default" bind:click="handleReset">重置</van-button>
+    <van-button round size="small" type="info" loading="{{showLoading}}" bind:click="handleSubmit">提交</van-button>
+  </view>
+  <van-toast id="van-toast" custom-class="van-toast-box" />
+</view>

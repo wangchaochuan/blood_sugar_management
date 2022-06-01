@@ -1,0 +1,7 @@
+<view class="container">
+  <view wx:if="{{showLoading}}" class="loading">
+    <van-loading type="spinner" color="#4c5cdb" />
+  </view>
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+  <van-toast id="van-toast" custom-class="van-toast-box" />
+</view>

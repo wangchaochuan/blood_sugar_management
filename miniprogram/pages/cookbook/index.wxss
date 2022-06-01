@@ -1,0 +1,25 @@
+/* pages/cookbook/index.wxss */
+.cookbook {
+  width: calc(100vw - 64rpx);
+  height: calc(100vh - 100rpx);
+  overflow-y: auto;
+  padding: 32rpx;
+  line-height: 54rpx;
+}
+
+.date {
+  display: flex;
+}
+
+.date>.text {
+  color: #4c5cdb;
+  margin-left: 8rpx;
+}
+
+.day {
+  color: red;
+}
+
+.label {
+  font-weight: 700;
+}
